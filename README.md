@@ -3,7 +3,9 @@ About
 
 Love [@FilmCritHULK](http://badassdigest.com/author/67)’s incredible essays but keep tripping over the obligatory HULKSPEAK? Tame the beast with the Bannerfy bookmarklet:
 
-`javascript:(function(){for(var a=document.querySelector("#primary .entry"),b=a.innerHTML,b=b.toLowerCase(),b=b.replace(/(\.)\n/g,"$1[-<br>-]$1 "),b=b.replace(/(\.)\s\n/g,"$1 [-<br>-]$1 "),c=[".","?","!"],i=0;i<c.length;i++)for(var d=c[i]+" ",e=b.split(d),f=e.length,g=0;g<f;g++)e[g]=e[g].replace(e[g].charAt(0),e[g].charAt(0).toUpperCase()),0==g?b=e[g]+d+" ":g!=f-1?b=b+e[g]+d+" ":g==f-1&&(b+=e[g]);b=b.replace(/\[-<br>-\]\.\s/g,"\n");b=b.replace(/\si\s/g," I ");b=b.replace(/\shulk\s/g," Hulk ");a.innerHTML=b;})();`
+```
+javascript:(function(){for(var a=document.querySelector("#primary .entry"),b=a.innerHTML,b=b.toLowerCase(),b=b.replace(/(\.)\n/g,"$1[-<br>-]$1 "),b=b.replace(/(\.)\s\n/g,"$1 [-<br>-]$1 "),c=[".","?","!"],i=0;i<c.length;i++)for(var d=c[i]+" ",e=b.split(d),f=e.length,g=0;g<f;g++)e[g]=e[g].replace(e[g].charAt(0),e[g].charAt(0).toUpperCase()),0==g?b=e[g]+d+" ":g!=f-1?b=b+e[g]+d+" ":g==f-1&&(b+=e[g]);b=b.replace(/\[-<br>-\]\.\s/g,"\n");b=b.replace(/\si\s/g," I ");b=b.replace(/\shulk\s/g," Hulk ");a.innerHTML=b;})();
+```
 
 Create a bookmark with that “address”, and any time you’re reading a Hulk-sized essay – like [this one](http://badassdigest.com/2013/06/12/film-crit-hulk-smash-the-age-of-the-convoluted-blockbuster/) – click the bookmarklet to Bannerfy the yelling a bit.
 
