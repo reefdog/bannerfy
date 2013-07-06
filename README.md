@@ -1,3 +1,8 @@
+Redaction
+=========
+
+I missed the point, wildly. Read my [mea culpa](http://justinreese.dev/bannerfy). I’m leaving this project alive, but removing the bookmarklet from the project page. You’ll have to do the dirty work yourself.
+
 About
 =====
 
