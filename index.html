@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <link rel="shortcut icon" href="images/bannerfy.ico">
+  <title>Bannerfy Bookmarklet For Wimps: Accept your puny humanity</title>
+  <style type="text/css">
+    body {
+      font-family: Gotham, 'Adobe Garamond Pro', 'Proxima Nova', Helvetica, Arial, sans-serif;
+      font-size: 1em;
+      line-height: 1.85em;
+      padding: 0.5em;
+    }
+    #shield {
+      margin: 0 auto;
+      min-width: 500px;
+      max-width: 600px;
+    }
+    #hulk-to-banner {
+      margin: 0 auto;
+      display: block;
+    }
+    h1, b, strong {
+      font-weight: 700;
+    }
+    h1 > small {
+      display: block;
+      font-size: 0.6em;
+      font-weight: 400;
+    }
+    p {
+      margin: 1.85em 0;
+    }
+    #bookmarklet {
+      font-size: 2em;
+      text-align: center;
+      padding: 0;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="shield">
+    <h1>Bannerfy Bookmarklet For Wimps</h1>
+    <p><img id="hulk-to-banner" src="images/bannerfy.jpg" width="500" height="250" alt="HULK to Banner"></p>
+    <p>Do you love <a href="https://twitter.com/FilmCritHULK">@FilmCritHULK</a>’s incredible essays, but as much as you get the joke and applaud the commitment you just can’t stand READING BLOCKS OF TEXT THAT AVOID THE ENTIRE LOWER CASE? Drag the following bookmarklet to your bookmark menu/bar/sandwich:</p>
+    <p id="bookmarklet"><a href='javascript:(function(){for(var a=document.querySelector(".Article-content"),b=a.innerHTML,b=b.toLowerCase(),b=b.replace(/(\.)\n/g,"$1[-<br>-]$1 "),b=b.replace(/(\.)\s\n/g,"$1 [-<br>-]$1 "),c=[".","?","!"],i=0;i<c.length;i++)for(var d=c[i]+" ",e=b.split(d),f=e.length,g=0;g<f;g++)e[g]=e[g].replace(e[g].charAt(0),e[g].charAt(0).toUpperCase()),0==g?b=e[g]+d+" ":g!=f-1?b=b+e[g]+d+" ":g==f-1&&(b+=e[g]);b=b.replace(/\[-<br>-\]\.\s/g,"\n");b=b.replace(/\si\s/g," I ");b=b.replace(/\shulk\s/g," Hulk ");a.innerHTML=b;})();'>Bannerfy</a></p>
+    <p>The next time you’re reading a <a href="http://birthmoviesdeath.com/2013/06/12/film-crit-hulk-smash-the-age-of-the-convoluted-blockbuster" title="THE AGE OF THE CONVOLUTED BLOCKBUSTER">HULK-SIZED ESSAY OF GOODNESS</a>, clicky-click that bookmarklet and wham bam you’re in (mostly) titlecase land.</p>
+    <p>Lovingly created by <a href="https://twitter.com/reefdog">@reefdog</a>, who is really bad at regex. It’s <a href="https://github.com/reefdog/bannerfy">open-source</a> so someone please fix all the problems.</p>
+
+  </div>
+
+</body>
+</html>
