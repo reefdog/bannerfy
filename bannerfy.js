@@ -1,4 +1,4 @@
-###
+/*
 ========================================================================
 bannerfy.js
 Love @FilmCritHULK's incredible essays but keep tripping over the
@@ -22,37 +22,39 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 ========================================================================
-###
+*/
 
-var entry = document.querySelector('#primary .entry');
-var content = entry.innerHTML;
+var article = document.querySelector('.Article-content');
+if (article) {
+  var content = article.innerHTML;
 
-content = content.toLowerCase();
-content = content.replace(/(\.)\n/g,"$1[-<br>-]$1 ");
-content = content.replace(/(\.)\s\n/g,"$1 [-<br>-]$1 ");
+  content = content.toLowerCase();
+  content = content.replace(/(\.)\n/g,"$1[-<br>-]$1 ");
+  content = content.replace(/(\.)\s\n/g,"$1 [-<br>-]$1 ");
 
-var splitters = ['.', '?', '!'];
-for (var i = 0; i < splitters.length; i++) {
-  var splitter     = splitters[i] + ' ';
-  var sentences    = content.split(splitter);
-  var sentence_len = sentences.length;
-  for (var x = 0; x < sentence_len; x++) {
-    sentences[x] = sentences[x].replace(sentences[x].charAt(0), sentences[x].charAt(0).toUpperCase());
+  var splitters = ['.', '?', '!'];
+  for (var i = 0; i < splitters.length; i++) {
+    var splitter     = splitters[i] + ' ';
+    var sentences    = content.split(splitter);
+    var sentence_len = sentences.length;
+    for (var x = 0; x < sentence_len; x++) {
+      sentences[x] = sentences[x].replace(sentences[x].charAt(0), sentences[x].charAt(0).toUpperCase());
 
-    if (x == 0) {
-      content = sentences[x] + splitter + ' ';
-    }
-    else if (x != sentence_len-1) {
-      content = content + sentences[x] + splitter + ' ';
-    }
-    else if (x == sentence_len-1) {
-      content = content + sentences[x];
+      if (x == 0) {
+        content = sentences[x] + splitter + ' ';
+      }
+      else if (x != sentence_len-1) {
+        content = content + sentences[x] + splitter + ' ';
+      }
+      else if (x == sentence_len-1) {
+        content = content + sentences[x];
+      }
     }
   }
+
+  content = content.replace(/\[-<br>-\]\.\s/g,"\n");
+  content = content.replace(/\si\s/g, ' I ');
+  content = content.replace(/\shulk\s/g, ' Hulk ');
+
+  article.innerHTML = content;
 }
-
-content = content.replace(/\[-<br>-\]\.\s/g,"\n");
-content = content.replace(/\si\s/g, ' I ');
-content = content.replace(/\shulk\s/g, ' Hulk ');
-
-entry.innerHTML = content;
