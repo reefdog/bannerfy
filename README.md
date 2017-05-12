@@ -17,7 +17,7 @@ A browser that supports `document.querySelector()`.
 Author
 ======
 
-Bannerfy was written by Justin Reese (http://justinreese.com, http://github.com/reefdog, http://twitter.com/reefdog) based on code found at http://www.textfixer.com/tools/capitalize-sentences.php.
+Bannerfy was written by Justin Reese (https://justinreese.com, http://github.com/reefdog, http://twitter.com/reefdog) based on code found at http://www.textfixer.com/tools/capitalize-sentences.php.
 
 License
 =========
